@@ -1,0 +1,89 @@
+/*布局*/
+body{
+    margin: 0;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+.secondNav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.secondNav .title{
+    height: 60px;
+    font-size: 24px;
+    color: #333333;
+    line-height: 60px;
+    padding-left: 10px;
+    border-left: 3px solid #6599ff;
+    cursor: pointer;
+}
+.secondNav .btn{
+    height: 40px;
+}
+.page-box{
+    margin: 20px 0;
+    justify-content: center;
+}
+.el-header, .el-footer {
+    background-color: #5966c6;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-aside {
+    background-color: #eee;
+    color: #333;
+    line-height: 200px;
+}
+.el-aside a{
+    color: #333;
+    text-decoration: none;
+}
+.menu-ico{
+    padding-left: 5px;
+    margin-right: 10px;
+}
+.menu-ico img{
+    width: 15px;
+}
+.el-aside .el-menu-item {
+    text-align: center;
+}
+
+body > .el-container {
+    margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+}
+table{
+    color: #303133;
+}
+
+.main{
+    padding: 20px 50px;
+    box-shadow: 4px 4px 40px rgba(0,0,0,.2);
+}
+[v-cloak] {
+    display: none;
+}
