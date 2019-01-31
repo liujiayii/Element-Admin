@@ -1,34 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './views/Home'
-import About from './views/About'
 import Layout from './views/layout/layout'
-
-const CarManage =()=> import('./view/carManage/carManage')
-const CarSales =()=> import('./view/carSales/carSales')
-const BuyCarConsult =()=> import('./view/customInfo/buyCarConsult')
-const CarResource =()=> import('./view/customInfo/carResource')
-const DisplaceCar =()=> import('./view/customInfo/displaceCar')
-const Finance =()=> import('./view/finance/finance')
-const Access =()=> import('./view/staff/access')
-const StaffManage =()=> import('./view/staff/staffManage')
-const stock =()=> import('./view/stock/stock')
-const NotFound = () => import('./page404')
+import CarManage from './views/carManage/carManage'
+import CarSales from './views/carSales/carSales'
+import BuyCarConsult from './views/customInfo/buyCarConsult'
+import CarResource from './views/customInfo/carResource'
+import DisplaceCar from './views/customInfo/displaceCar'
+import Finance from './views/finance/finance'
+import Access from './views/staff/access'
+import StaffManage from './views/staff/staffManage'
+import stock from './views/stock/stock'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [{
-    path: '/',
-    redirect: '/home'
-  }, {
-    path: '/',
-    name: 'home',
-    component: Home
-  }, {
-    path: '/about',
-    name: 'about',
-    component: About
+    path: '/carResource',
+    name: 'carResource',
+    component: CarResource
+  },{
+    path: '/buyCarConsult',
+    name: 'buyCarConsult',
+    component: BuyCarConsult
+  },{
+    path: '/displaceCar',
+    name: 'displaceCar',
+    component: DisplaceCar
   }]
 })

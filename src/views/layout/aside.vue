@@ -5,7 +5,6 @@
               :default-active="navActive"
               class="el-menu-vertical-demo"
               router
-              :collapse="isCollapse"
               unique-opened>
         <el-submenu index="1">
           <template slot="title">

@@ -9,20 +9,19 @@
         <el-container>
           <el-aside style="width: auto">
             <el-menu
-                    :default-active="navActive"
                     class="el-menu-vertical-demo"
                     router
                     :collapse="isCollapse"
                     unique-opened>
               <el-submenu index="1">
                 <template slot="title">
-                  <i class="menu-ico"><img src="/static/images/1.png"></i>
+                  <i class="menu-ico"><img src="/assets/images/1.png"></i>
                   <span>客户信息</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="1-1">车辆资源</el-menu-item>
-                  <el-menu-item index="1-2">买车咨询</el-menu-item>
-                  <el-menu-item index="1-3">置换车辆</el-menu-item>
+                  <el-menu-item index="CarResource">车辆资源</el-menu-item>
+                  <el-menu-item index="BuyCarConsult">买车咨询</el-menu-item>
+                  <el-menu-item index="DisplaceCar">置换车辆</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
               <el-submenu index="2">
@@ -140,7 +139,7 @@
     name: "layout",
     data: function () {
       return {
-        navActive: '4-1',
+        navActive: '1-1',
         isCollapse: false,
         tableData: {
           data: [],
