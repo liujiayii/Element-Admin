@@ -12,10 +12,12 @@
                 class="el-menu-vertical-demo"
                 router
                 unique-opened
-                :collapse-transition="true">
+                background-color="#545c64"
+                text-color="#fff"
+                active-text-color="#ffd04b">
           <el-submenu index="1">
             <template slot="title">
-              <i class="menu-ico"><img src="/assets/images/1.png"></i>
+              <i class="el-icon-location"></i>
               <span>客户信息</span>
             </template>
             <el-menu-item-group>
@@ -26,7 +28,7 @@
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/2.png"></i>
+              <i class="el-icon-menu"></i>
               <span slot="title">交易管理</span>
             </template>
             <el-menu-item-group>
@@ -37,53 +39,53 @@
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/3.png"></i>
+              <i class="el-icon-document"></i>
               <span slot="title">售车管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="3-1">售车管理</el-menu-item>
+              <el-menu-item index="/carSales">售车管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="4">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/4.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">车辆管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="4-1">车辆管理</el-menu-item>
+              <el-menu-item index="/carManage">车辆管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="5">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/5.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">财务管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="5-1">财务管理</el-menu-item>
+              <el-menu-item index="/finance">财务管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="6">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/6.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">库存管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="6-1">库存管理</el-menu-item>
+              <el-menu-item index="/stock">库存管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="7">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/7.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">人员管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="7-1">员工管理</el-menu-item>
-              <el-menu-item index="7-2">权限管理</el-menu-item>
+              <el-menu-item index="/staffManage">员工管理</el-menu-item>
+              <el-menu-item index="/access">权限管理</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="8">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/7.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">维修管理</span>
             </template>
             <el-menu-item-group>
@@ -96,7 +98,7 @@
           </el-submenu>
           <el-submenu index="9">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/7.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">维修档案管理</span>
             </template>
             <el-menu-item-group>
@@ -108,7 +110,7 @@
           </el-submenu>
           <el-submenu index="10">
             <template slot="title">
-              <i class="menu-ico"><img src="/static/images/7.png"></i>
+              <i class="el-icon-setting"></i>
               <span slot="title">报表管理</span>
             </template>
             <el-menu-item-group>

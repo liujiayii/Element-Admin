@@ -10,7 +10,7 @@ import DisplaceCar from './views/customInfo/displaceCar'
 import Finance from './views/finance/finance'
 import Access from './views/staff/access'
 import StaffManage from './views/staff/staffManage'
-import stock from './views/stock/stock'
+import Stock from './views/stock/stock'
 
 Vue.use(Router)
 
@@ -27,5 +27,29 @@ export default new Router({
     path: '/displaceCar',
     name: 'displaceCar',
     component: DisplaceCar
+  },{
+    path: '/carManage',
+    name: 'carManage',
+    component: CarManage
+  },{
+    path: '/carSales',
+    name: 'carSales',
+    component: CarSales
+  },{
+    path: '/finance',
+    name: 'finance',
+    component: Finance
+  },{
+    path: '/access',
+    name: 'access',
+    component: Access
+  },{
+    path: '/staffManage',
+    name: 'staffManage',
+    component: StaffManage
+  },{
+    path: '/stock',
+    name: 'stock',
+    component: Stock
   }]
 })

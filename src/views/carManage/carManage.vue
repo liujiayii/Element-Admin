@@ -5,15 +5,6 @@
       <el-button class="btn" type="primary" icon="el-icon-plus" round>添加</el-button>
     </el-container>
     <el-container class="main"></el-container>
-    <el-container class="page-box">
-      <div class="block">
-        <el-pagination
-                @current-change="handleCurrentChange"
-                layout="total,prev, pager, next, jumper"
-                :total="tableData.count">
-        </el-pagination>
-      </div>
-    </el-container>
   </div>
 </template>
 
