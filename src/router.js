@@ -11,6 +11,7 @@ import Finance from './views/finance/finance'
 import Access from './views/staff/access'
 import StaffManage from './views/staff/staffManage'
 import Stock from './views/stock/stock'
+import Login from './views/login/login'
 
 Vue.use(Router)
 
@@ -51,5 +52,9 @@ export default new Router({
     path: '/stock',
     name: 'stock',
     component: Stock
+  },{
+    path: '/login',
+    name: 'login',
+    component: Login
   }]
 })
