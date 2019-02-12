@@ -1,4 +1,4 @@
-# car-admin
+# Element-Admin
 
 ## Project setup
 ```

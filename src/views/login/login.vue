@@ -1,20 +1,24 @@
 <template>
-  <el-container class="main">
-    <p class="title">喔驰后台管理系统</p>
-    <div>
-      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="账号" prop="username">
-          <el-input v-model="ruleForm.username"></el-input>
+  <div id="login">
+    <h3 class="loginTitle">Element-Admin后台管理模板</h3>
+    <div class="loginBox">
+      <el-form :model="loginForm" :rules="rules" ref="ruleForm" status-icon>
+        <el-form-item prop="username">
+          <el-input placeholder="请输入账号" v-model="loginForm.username">
+            <span slot="prepend" class="ico"><i class="fa fa-user fa-lg"></i></span>
+          </el-input>
         </el-form-item>
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="ruleForm.password"></el-input>
+        <el-form-item prop="password">
+          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password" >
+            <span slot="prepend" class="ico"><i class="fa fa-unlock-alt fa-lg"></i></span>
+          </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')" class="submit" round :loading="loading">登录</el-button>
+          <el-button class="sub" type="primary" :loading="loading" @click="submitForm('ruleForm')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
-  </el-container>
+  </div>
 </template>
 
 <script>
@@ -22,9 +26,9 @@
     name: "login",
     data() {
       return {
-        ruleForm: {
+        loginForm: {
           username: 'admin',
-          password: '12345678'
+          password: '123456'
         },
         rules: {
           username: [
@@ -44,48 +48,64 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true
-            console.log('success submit!!');
+            setTimeout(()=>{
+              this.$router.push({path: '/home'})
+            },2000)
           } else {
-            console.log('error submit!!');
             return false;
           }
         });
+      },
+      message() {
+        this.$notify({
+          title: '账号密码',
+          message: '账号密码可以随意填写',
+          type: 'warning',
+          duration: 6000
+        });
       }
+    },
+    mounted() {
+      this.message()
     }
   }
 </script>
 
 <style scoped>
-  html,body{
+  #login {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    background: #2d3a4b;
   }
-  body{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url("/assets/login.png") no-repeat center;
-  }
-  .main{
-    position: absolute;
-    bottom: 20%;
-    right: 20%;
-    width: 600px;
-    height: 500px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .title{
-    padding-left: 68px;
+
+  .loginTitle {
+    padding-top: 230px;
     font-size: 30px;
-    color: #5966c6;
-    margin-bottom: 94px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
   }
-  .submit{
-    margin-top: 100px;
+
+  .loginBox {
+    width: 300px;
+    height: 600px;
+    margin: 20px auto;
+  }
+
+  .sub {
     width: 100%;
-    background: #5966c6;
+  }
+
+  .el-form-item__content .ico {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 40px;
+    height: 39px;
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #ccc;
   }
 
 </style>
