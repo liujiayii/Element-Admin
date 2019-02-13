@@ -1,7 +1,7 @@
 <template>
   <el-aside class="aside">
-    <p class="logo" @click="isCollapse=!isCollapse">{{logo}}</p>
-    <el-menu
+    <p class="logo">{{logo}}</p>
+    <!--<el-menu
             :default-active="$route.path"
             class="el-menu-vertical-demo"
             router
@@ -9,7 +9,7 @@
             background-color="#545c64"
             text-color="#fff"
             active-text-color="#ffd04b"
-            :collapse="isCollapse">
+            :collapse="$store.state.isCollapse">
       <el-menu-item index="/home">
         <i class="el-icon-menu"></i>
         <span slot="title">主页</span>
@@ -82,57 +82,41 @@
           <el-menu-item index="/access">权限管理</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-submenu index="8">
+    </el-menu>-->
+    <template v-for="(menu_v,index) in menu">
+      <el-submenu v-if="menu_v.children" :key="index">
         <template slot="title">
-          <i class="el-icon-setting"></i>
-          <span slot="title">维修管理</span>
+          <i :class="menu_v.icon"></i>
+          <span slot="title">{{ menu_v.name }}</span>
         </template>
-        <el-menu-item-group>
-          <el-menu-item index="8-1">维修工单</el-menu-item>
-          <el-menu-item index="8-2">维修车型分类</el-menu-item>
-          <el-menu-item index="8-3">维修工时计算</el-menu-item>
-          <el-menu-item index="8-4">维修项目定义</el-menu-item>
-          <el-menu-item index="8-5">维修项目用料</el-menu-item>
-        </el-menu-item-group>
+        <el-menu-item v-for="(menuChildren_v,index) in menu_v.children"
+                      :key="index"
+                      :index="menuChildren_v.path">
+          <i class="is-children fa fa-circle-o"></i>
+          <span slot="title">{{ menuChildren_v.name }}</span>
+        </el-menu-item>
       </el-submenu>
-      <el-submenu index="9">
-        <template slot="title">
-          <i class="el-icon-setting"></i>
-          <span slot="title">维修档案管理</span>
-        </template>
-        <el-menu-item-group>
-          <el-menu-item index="9-1">客户档案</el-menu-item>
-          <el-menu-item index="9-2">车辆档案</el-menu-item>
-          <el-menu-item index="9-3">员工档案</el-menu-item>
-          <el-menu-item index="9-4">驾驶员信息档案</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-      <el-submenu index="10">
-        <template slot="title">
-          <i class="el-icon-setting"></i>
-          <span slot="title">报表管理</span>
-        </template>
-        <el-menu-item-group>
-          <el-menu-item index="10-1">维修报表</el-menu-item>
-          <el-menu-item index="10-2">售车报表</el-menu-item>
-          <el-menu-item index="10-3">进车报表</el-menu-item>
-        </el-menu-item-group>
-      </el-submenu>
-    </el-menu>
+      <el-menu-item v-else :index="menu_v.path" :key="index">
+        <i :class="menu_v.icon"></i>
+        <span slot="title">{{ menu_v.name }}</span>
+      </el-menu-item>
+    </template>
   </el-aside>
 </template>
 
 <script>
+  import Menu from '@/menu/index';
+
   export default {
     name: "asider",
     data() {
       return {
-        isCollapse: false
+        menu: Menu,
       }
     },
     computed: {
       logo() {
-        return !this.isCollapse ? 'Element后台管理系统' : 'E'
+        return !this.$store.state.isCollapse ? 'Element' : 'E'
       }
     }
   }
@@ -159,5 +143,9 @@
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
     min-height: 400px;
+  }
+
+  .el-menu {
+    border-right: none !important;
   }
 </style>

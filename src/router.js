@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Layout from './views/layout/layout'
-import Error from  './views/error/error'
+import Error from './views/notFound/notFound'
 import CarManage from './views/carManage/carManage'
 import CarSales from './views/carSales/carSales'
 import BuyCarConsult from './views/customInfo/buyCarConsult'
@@ -87,9 +87,10 @@ export default new Router({
         }
       ]
     }, {
-      path: '/404',
-      name: '404',
+      path: '*',  // 通配符拦截放在最后，不存在的路由全都指向404页面
+      redirect: '/404',
       component: Error,
+      hidden: true,
       children: []
     }]
 })

@@ -2,7 +2,7 @@
   <div id="login">
     <h3 class="loginTitle">Element-Admin后台管理模板</h3>
     <div class="loginBox">
-      <el-form :model="loginForm" :rules="rules" ref="ruleForm" status-icon>
+      <el-form :model="loginForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="username">
           <el-input placeholder="请输入账号" v-model="loginForm.username">
             <span slot="prepend" class="ico"><i class="fa fa-user fa-lg"></i></span>

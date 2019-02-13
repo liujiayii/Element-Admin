@@ -1,13 +1,12 @@
 <template>
   <div>
-    <p>ERROR 404</p>
-    <p>访问资源未找到</p>
+    404
   </div>
 </template>
 
 <script>
   export default {
-    name: "error"
+    name: "404"
   }
 </script>
 

@@ -28,9 +28,6 @@
     bottom: 0px;
     width: 100%;
   }
-  a{
-    color: #56a9ff;
-  }
   .fade-enter-active,
   .fade-leave-active {
     transition: all .2s ease;
@@ -39,5 +36,14 @@
   .fade-enter,
   .fade-leave-active {
     opacity: 0;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  .el-header, .el-footer {
+    background-color: #545c64;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
   }
 </style>
