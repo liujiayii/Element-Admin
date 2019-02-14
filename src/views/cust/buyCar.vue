@@ -1,12 +1,14 @@
 <template>
   <div>
-    404
+    <el-container>
+      买车咨询2
+    </el-container>
   </div>
 </template>
 
 <script>
   export default {
-    name: "notFound"
+    name: 'buyCar'
   }
 </script>
 

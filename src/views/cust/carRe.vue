@@ -1,12 +1,14 @@
 <template>
   <div>
-    404
+    <el-container>
+      车辆资源2
+    </el-container>
   </div>
 </template>
 
 <script>
   export default {
-    name: "notFound"
+    name: "carRe"
   }
 </script>
 
