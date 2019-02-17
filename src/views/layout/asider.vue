@@ -11,7 +11,7 @@
             active-text-color="#ffd04b"
             :collapse="$store.state.isCollapse">
       <template v-for="(menu_a,index) in menu">
-        <el-submenu v-if="menu_a.children" :key="index" :index="index">
+        <el-submenu v-if="menu_a.children" :key="index" :index="index+''">
           <template slot="title">
             <i :class="menu_a.icon"></i>
             <span slot="title">{{ menu_a.name }}</span>
