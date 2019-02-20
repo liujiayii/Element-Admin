@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0bd79a"],{"2bc7":function(e,n,c){"use strict";c.r(n);var t=function(){var e=this,n=e.$createElement,c=e._self._c||n;return c("div",[c("el-container",[e._v("\n    车辆资源\n  ")])],1)},a=[],r={name:"carResource"},u=r,o=c("2877"),s=Object(o["a"])(u,t,a,!1,null,"0c7d0e96",null);n["default"]=s.exports}}]);
+//# sourceMappingURL=chunk-2d0bd79a.4e8633a9.js.map

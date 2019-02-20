@@ -1,5 +1,35 @@
-import Menu from './menu';
+let menu = [{
+  name: '首页',
+  path: '/home',
+  icon: 'el-icon-menu'
+}, {
+  name: '客户信息',
+  icon: 'el-icon-location',
+  children: [{
+    name: '车辆资源',
+    path: '/carResource',
+  }, {
+    name: '买车咨询',
+    path: '/buyCarConsult',
+  }, {
+    name: '置换车辆',
+    path: '/displaceCar',
+  }]
+}, {
+  name: '客户信息2',
+  icon: 'el-icon-location',
+  children: [
+    {
+      name: '车辆资源2',
+      path: '/carRe',
+    }, {
+      name: '买车咨询2',
+      path: '/buyCar',
+    }, {
+      name: '置换车辆2',
+      path: '/dis',
+    }
+  ]
+}]
 
-//这里可以根据权限做菜单过滤
-
-export default  Menu;
+export default menu;
