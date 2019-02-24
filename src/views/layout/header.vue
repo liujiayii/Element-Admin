@@ -1,16 +1,31 @@
 <template>
   <el-header class="head">
-    <span class="ico" @click="$store.state.isCollapse = !$store.state.isCollapse">
-     <i class="fa fa-indent fa-lg"></i>
+    <span
+      class="ico"
+      @click="$store.state.isCollapse = !$store.state.isCollapse"
+    >
+      <i class="fa fa-indent fa-lg" />
     </span>
     <el-dropdown @command="handleCommand">
-        <span class="el-dropdown-link" style="color:#fff;cursor: pointer">
-          超级管理员<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
+      <span
+        class="el-dropdown-link"
+        style="color:#fff;cursor: pointer"
+      >
+        超级管理员<i class="el-icon-arrow-down el-icon--right" />
+      </span>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item command="a">基本资料</el-dropdown-item>
-        <el-dropdown-item command="b">修改密码</el-dropdown-item>
-        <el-dropdown-item command="logout" divided>退出</el-dropdown-item>
+        <el-dropdown-item command="a">
+          基本资料
+        </el-dropdown-item>
+        <el-dropdown-item command="b">
+          修改密码
+        </el-dropdown-item>
+        <el-dropdown-item
+          command="logout"
+          divided
+        >
+          退出
+        </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </el-header>

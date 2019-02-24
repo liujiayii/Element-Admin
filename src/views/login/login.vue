@@ -1,20 +1,46 @@
 <template>
   <div id="login">
-    <h3 class="loginTitle">Element-Admin后台管理模板</h3>
+    <h3 class="loginTitle">
+      Element-Admin后台管理模板
+    </h3>
     <div class="loginBox">
-      <el-form :model="loginForm" :rules="rules" ref="ruleForm">
+      <el-form
+        :model="loginForm"
+        :rules="rules"
+        ref="ruleForm"
+      >
         <el-form-item prop="username">
-          <el-input placeholder="请输入账号" v-model="loginForm.username">
-            <span slot="prepend" class="ico"><i class="fa fa-user fa-lg"></i></span>
+          <el-input
+            placeholder="请输入账号"
+            v-model="loginForm.username"
+          >
+            <span
+              slot="prepend"
+              class="ico"
+            ><i class="fa fa-user fa-lg" /></span>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password">
-            <span slot="prepend" class="ico"><i class="fa fa-unlock-alt fa-lg"></i></span>
+          <el-input
+            placeholder="请输入密码"
+            type="password"
+            v-model="loginForm.password"
+          >
+            <span
+              slot="prepend"
+              class="ico"
+            ><i class="fa fa-unlock-alt fa-lg" /></span>
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button class="sub" type="primary" :loading="loading" @click="submitForm('ruleForm')">登录</el-button>
+          <el-button
+            class="sub"
+            type="primary"
+            :loading="loading"
+            @click="submitForm('ruleForm')"
+          >
+            登录
+          </el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -23,7 +49,7 @@
 
 <script>
   export default {
-    name: "login",
+    name: "Login",
     data() {
       return {
         loginForm: {

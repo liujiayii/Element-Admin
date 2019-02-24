@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'buyCarConsult'
+    name: 'BuyCarConsult'
   }
 </script>
 

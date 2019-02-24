@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "carResource"
+    name: "CarResource"
   }
 </script>
 

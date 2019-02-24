@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "dis"
+    name: "Dis"
   }
 </script>
 
