@@ -1,0 +1,20 @@
+{
+  "menu": [{
+      "name": "导航一",
+      "path": "/",
+      "Children": [{
+          "path": "/menutab",
+          "name": "Tab"
+        }]
+    }, {
+      "name": "导航三",
+      "path": "/",
+      "Children": [{
+          "path": "/progress",
+          "name": "Progress"
+        }, {
+          "path": "/form",
+          "name": "Form"
+        }]
+    }]
+}

@@ -9,7 +9,7 @@
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password" >
+          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password">
             <span slot="prepend" class="ico"><i class="fa fa-unlock-alt fa-lg"></i></span>
           </el-input>
         </el-form-item>
@@ -48,9 +48,15 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true
-            setTimeout(()=>{
+            /*this.$http.get('/src/menu/admin.json').then(res => {
+              let resJson = JSON.parse(res.bodyText)
+              if (this.loginForm.username == resJson.username) {
+                sessionStorage.setItem('menu', res.menu)
+              }
+            })*/
+            setTimeout(() => {
               this.$router.push({path: '/home'})
-            },2000)
+            }, 2000)
           } else {
             return false;
           }
