@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d7683"],{"774a":function(n,e,t){"use strict";t.r(e);var a=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[t("el-container",[n._v("\n    置换车辆2\n  ")])],1)},c=[],i={name:"dis"},r=i,s=t("2877"),u=Object(s["a"])(r,a,c,!1,null,"29b600e6",null);e["default"]=u.exports}}]);
-//# sourceMappingURL=chunk-2d0d7683.f9b15c30.js.map

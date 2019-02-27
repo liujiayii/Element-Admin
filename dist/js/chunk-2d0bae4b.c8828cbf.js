@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0bae4b"],{"38c3":function(n,e,c){"use strict";c.r(e);var a=function(){var n=this,e=n.$createElement,c=n._self._c||e;return c("div",[c("el-container",[n._v("\n    买车咨询2\n  ")])],1)},t=[],r={name:"buyCar"},u=r,i=c("2877"),l=Object(i["a"])(u,a,t,!1,null,"6c43bac0",null);e["default"]=l.exports}}]);
-//# sourceMappingURL=chunk-2d0bae4b.c8828cbf.js.map

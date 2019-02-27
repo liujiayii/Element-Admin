@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c93d3"],{"57fa":function(n,e,c){"use strict";c.r(e);var t=function(){var n=this,e=n.$createElement,c=n._self._c||e;return c("div",[c("el-container",[n._v("\n    车辆资源2\n  ")])],1)},a=[],r={name:"carRe"},u=r,i=c("2877"),l=Object(i["a"])(u,t,a,!1,null,"201cfc44",null);e["default"]=l.exports}}]);
-//# sourceMappingURL=chunk-2d0c93d3.59a971ac.js.map

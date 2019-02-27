@@ -4,30 +4,30 @@
       {{ logo }}
     </p>
     <el-menu
-      :default-active="$route.path"
-      class="el-menu-vertical-demo"
-      router
-      unique-opened
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-      :collapse="$store.state.isCollapse"
+            :default-active="$route.path"
+            class="el-menu-vertical-demo"
+            router
+            unique-opened
+            background-color="#545c64"
+            text-color="#fff"
+            active-text-color="#ffd04b"
+            :collapse="$store.state.isCollapse"
     >
       <template v-for="(menu_a,index) in menu">
         <el-submenu
-          v-if="menu_a.children"
-          :key="index"
-          :index="index+''"
+                v-if="menu_a.children"
+                :key="index"
+                :index="index+''"
         >
           <template slot="title">
-            <i :class="menu_a.icon" />
+            <i :class="menu_a.icon"/>
             <span slot="title">{{ menu_a.name }}</span>
           </template>
           <el-menu-item-group>
             <el-menu-item
-              v-for="(menu_c,index_c) in menu_a.children"
-              :key="index_c"
-              :index="menu_c.path"
+                    v-for="(menu_c,index_c) in menu_a.children"
+                    :key="index_c"
+                    :index="menu_c.path"
             >
               <span slot="title">{{ menu_c.name }}</span>
             </el-menu-item>
@@ -35,11 +35,11 @@
         </el-submenu>
 
         <el-menu-item
-          v-else
-          :index="menu_a.path"
-          :key="index"
+                v-else
+                :index="menu_a.path"
+                :key="index"
         >
-          <i :class="menu_a.icon" />
+          <i :class="menu_a.icon"/>
           <span slot="title">{{ menu_a.name }}</span>
         </el-menu-item>
       </template>
@@ -48,13 +48,12 @@
 </template>
 
 <script>
-  import Menu from '@/menu/index';
 
   export default {
     name: "Asider",
     data() {
       return {
-        menu: Menu,
+        menu: this.$store.state.menu,
       }
     },
     computed: {

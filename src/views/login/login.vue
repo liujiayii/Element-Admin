@@ -4,43 +4,19 @@
       Element-Admin后台管理模板
     </h3>
     <div class="loginBox">
-      <el-form
-        :model="loginForm"
-        :rules="rules"
-        ref="ruleForm"
-      >
+      <el-form :model="loginForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="username">
-          <el-input
-            placeholder="请输入账号"
-            v-model="loginForm.username"
-          >
-            <span
-              slot="prepend"
-              class="ico"
-            ><i class="fa fa-user fa-lg" /></span>
+          <el-input placeholder="请输入账号" v-model="loginForm.username">
+            <span slot="prepend" class="ico"><i class="fa fa-user fa-lg"/></span>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input
-            placeholder="请输入密码"
-            type="password"
-            v-model="loginForm.password"
-          >
-            <span
-              slot="prepend"
-              class="ico"
-            ><i class="fa fa-unlock-alt fa-lg" /></span>
+          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password">
+            <span slot="prepend" class="ico"><i class="fa fa-unlock-alt fa-lg"/></span>
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button
-            class="sub"
-            type="primary"
-            :loading="loading"
-            @click="submitForm('ruleForm')"
-          >
-            登录
-          </el-button>
+          <el-button class="sub" type="primary" :loading="loading" @click="submitForm('ruleForm')">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -74,15 +50,13 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true
-            /*this.$http.get('/src/menu/admin.json').then(res => {
-              let resJson = JSON.parse(res.bodyText)
-              if (this.loginForm.username == resJson.username) {
-                sessionStorage.setItem('menu', res.menu)
-              }
-            })*/
-            setTimeout(() => {
+            axios.get('/mock/admin.json').then((res) => {
+              console.log(res)
+              this.$store.state.menu = res.data.menu
               this.$router.push({path: '/home'})
-            }, 2000)
+            }).catch(err => {
+              console.log(err)
+            })
           } else {
             return false;
           }
