@@ -50,7 +50,7 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true
-            axios.get('/mock/admin.json').then((res) => {
+            axios.get('./mock/admin.json').then((res) => {
               console.log(res)
               this.$store.state.menu = res.data.menu
               this.$router.push({path: '/home'})
