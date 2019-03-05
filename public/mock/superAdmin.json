@@ -1,8 +1,8 @@
 {
-  "username": "admin",
+  "username": "superAdmin",
   "password": "123456",
   "userInfo": {
-    "name": "管理员",
+    "name": "超级管理员",
     "menu": [
       {
         "name": "首页",
@@ -24,6 +24,24 @@
           {
             "name": "置换车辆",
             "path": "/displaceCar"
+          }
+        ]
+      },
+      {
+        "name": "客户信息2",
+        "icon": "el-icon-location",
+        "children": [
+          {
+            "name": "车辆资源2",
+            "path": "/carRe"
+          },
+          {
+            "name": "买车咨询2",
+            "path": "/buyCar"
+          },
+          {
+            "name": "置换车辆2",
+            "path": "/dis"
           }
         ]
       }

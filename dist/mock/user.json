@@ -1,0 +1,14 @@
+{
+  "username": "",
+  "password": "",
+  "userInfo": {
+    "name": "用户",
+    "menu": [
+      {
+        "name": "首页",
+        "path": "/home",
+        "icon": "el-icon-menu"
+      }
+    ]
+  }
+}
