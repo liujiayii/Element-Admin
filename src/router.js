@@ -72,28 +72,6 @@ let addRouter = [
     component: Layout,
     children: [
       {
-        path: '/carResource',
-        name: 'carResource',
-        component: CarResource,
-        children: []
-      }, {
-        path: '/buyCarConsult',
-        name: 'buyCarConsult',
-        component: BuyCarConsult,
-        children: []
-      }, {
-        path: '/displaceCar',
-        name: 'displaceCar',
-        component: DisplaceCar,
-        children: []
-      }
-    ]
-  }, {
-    path: '/',
-    name: 'layout',
-    component: Layout,
-    children: [
-      {
         path: '/carRe',
         name: 'carRe',
         component: CarRe,
