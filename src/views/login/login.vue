@@ -1,4 +1,3 @@
-
 <template>
   <div id="login">
     <h3 class="loginTitle">Element-Admin后台管理模板</h3>
@@ -6,12 +5,12 @@
       <el-form :model="loginForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="username">
           <el-input placeholder="请输入账号" v-model="loginForm.username">
-            <span slot="prepend" class="ico"><i class="fa fa-user fa-lg" /></span>
+            <span slot="prepend" class="ico"><i class="el-icon-user-solid"/></span>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input placeholder="请输入密码" type="password" v-model="loginForm.password">
-            <span slot="prepend" class="ico"><i class="fa fa-unlock-alt fa-lg" /></span>
+            <span slot="prepend" class="ico"><i class="el-icon-lock"/></span>
           </el-input>
         </el-form-item>
         <el-form-item>
@@ -23,14 +22,13 @@
 </template>
 
 <script>
-  import menus from '../../router.js'
 
   export default {
     name: "Login",
     data() {
       return {
         loginForm: {
-          username: 'superAdmin',
+          username: 'admin',
           password: '123456'
         },
         rules: {
@@ -51,35 +49,11 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true
-            let url = ''
-            if (this.loginForm.username == 'admin') {
-              url = './mock/admin.json'
-            } else if (this.loginForm.username == 'superAdmin') {
-              url = './mock/superAdmin.json'
-            } else {
-              url = './mock/user.json'
-            }
-            this.axios.get(url).then((res) => {
+            this.$ajax({
+              methods: 'get',
+              url: '/mock/admin.json',
+            }).then((res) => {
               console.log(res)
-              if (this.loginForm.username == 'admin' || this.loginForm.username == 'superAdmin') {
-                if(this.loginForm.username == res.data.username && this.loginForm.password == res.data.password){
-                  this.$store.state.menu = res.data.userInfo.menu
-                  this.$router.push({path: '/home'})
-                  console.log(menus)
-                 // this.$router.addRoutes(res.data.userInfo.menu)
-                }else {
-                  this.loading = false
-                  this.$notify.error({
-                    title: '错误',
-                    message: res.data.msg
-                  });
-                }
-              } else {
-                this.$store.state.menu = res.data.userInfo.menu
-                this.$router.push({path: '/home'})
-              }
-            }).catch(err => {
-              console.log(err)
             })
           } else {
             return false;
@@ -88,8 +62,8 @@
       },
       message() {
         this.$notify({
-          title: '账号密码',
-          message: '账号密码可以随意填写',
+          title: '欢迎使用',
+          message: '账号:admin,密码:123456',
           type: 'warning',
           duration: 6000
         });

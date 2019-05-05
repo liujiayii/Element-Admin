@@ -1,17 +1,14 @@
 <template>
   <el-container style="height: 100%">
-    <layoutAsider />
+    <layoutAsider/>
     <el-container style="flex-direction: column">
-      <layoutHeader />
+      <layoutHeader/>
       <el-main>
-        <transition
-          name="main"
-          mode="out-in"
-        >
-          <router-view />
+        <transition name="main" mode="out-in">
+          <router-view/>
         </transition>
       </el-main>
-      <layoutFooter />
+      <layoutFooter/>
     </el-container>
   </el-container>
 </template>

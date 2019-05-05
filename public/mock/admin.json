@@ -1,33 +1,70 @@
 {
-  "username": "admin",
-  "password": "123456",
-  "userInfo": {
-    "name": "管理员",
-    "menu": [
-      {
-        "name": "首页",
-        "path": "/home",
-        "icon": "el-icon-menu"
-      },
-      {
-        "name": "客户信息",
-        "icon": "el-icon-location",
-        "children": [
-          {
-            "name": "车辆资源",
-            "path": "/carResource"
+  "code": 1,
+  "data": [
+    {
+      "path": "#",
+      "component": "Layout",
+      "Ico": "home",
+      "children": [
+        {
+          "path": "/home",
+          "component": "HomePage",
+          "meta": {
+            "title": "首页_"
           },
-          {
-            "name": "买车咨询",
-            "path": "/buyCarConsult"
+          "name": "首页"
+        }
+      ],
+      "name": "首页_"
+    },
+    {
+      "path": "/website",
+      "component": "Layout",
+      "Ico": "dashboard",
+      "children": [
+        {
+          "path": "homePage",
+          "component": "Home",
+          "meta": {
+            "title": "云阙官网"
           },
-          {
-            "name": "置换车辆",
-            "path": "/displaceCar"
-          }
-        ]
-      }
-    ]
-  },
-  "msg": "用户名或密码错误"
+          "name": "官网主页"
+        },
+        {
+          "path": "about",
+          "component": "About",
+          "meta": {
+            "title": "云阙官网"
+          },
+          "name": "关于我们"
+        },
+        {
+          "path": "contact",
+          "component": "Contact",
+          "meta": {
+            "title": "云阙官网"
+          },
+          "name": "联系我们"
+        },
+        {
+          "path": "friends",
+          "component": "Friends",
+          "meta": {
+            "title": "云阙官网"
+          },
+          "name": "友情链接"
+        },
+        {
+          "path": "version",
+          "component": "Version",
+          "meta": {
+            "title": "云阙官网"
+          },
+          "name": "APP管理"
+        }
+      ],
+      "name": "云阙官网"
+    }
+  ],
+  "msg": "登录成功"
 }
