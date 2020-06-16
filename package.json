@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "element-ui": "^2.6.1",
+    "element-ui": "^2.13.2",
     "font-awesome": "^4.7.0",
     "vue": "^2.6.8",
     "vue-axios": "^2.1.4",
